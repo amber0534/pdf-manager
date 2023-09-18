@@ -45,6 +45,11 @@ Gebruik hierbij absolute paden.
 Nu kan door het aanroepen van `launch.sh` een rofi menu geopend
 worden waarin PDF bestanden geopend kunnen worden.
 Met behulp van de command line interface `pdfmgr` kunnen
-PDFs toegevoegt en verwijdert worden aan de database.
+PDFs toegevoegd en verwijderd worden aan de database.
 Run `pdfmgr -h` om alle opties te bekijken.
+
+Het is aan te raden om een snelle manier aan te maken om
+het bestand `launch.sh` uit te voeren, bijvoorbeeld
+door een alias in `.bash_aliases` aan te maken,
+of door een keybinding in je hotkey daemon toe te voegen.
 
