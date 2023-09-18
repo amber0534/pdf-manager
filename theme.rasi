@@ -1,57 +1,56 @@
 // General properties
 * {
-  font: "JetBrainsMono Nerd Font Light 12";
+  font:                           "JetBrainsMono Nerd Font Light 12";
 
   // Backgrounds
-  c-bg:             #14171c;
-  c-bg-alt:         #202025;
-  dark:             #3c3c3c;
-  foreground:       #ffeedd;
-  c-selected:       #555555;
-  c-bg-trans:       #00000055;
-  c-bg-trans2:      #000000aa;
+  c-bg:                           #14171c;
+  c-bg-alt:                       #202025;
+  dark:                           #3c3c3c;
+  foreground:                     #ffeedd;
+  c-selected:                     #555555;
+  c-bg-trans:                     #00000055;
+  c-bg-trans2:                    #000000aa;
 
   // Text colors
-  c-text:           #ffffff;
-  c-text-alt:       #dddddd;
+  c-text:                         #ffffff;
+  c-text-alt:                     #dddddd;
 
   // Red colors
-  c-red:            #ff0000;
+  c-red:                          #ff0000;
 
   // Border colors
-  c-border:         #ffffff;
-  c-border-alt:     #ffffff55;
+  c-border:                       #ffffff;
+  c-border-alt:                   #ffffff55;
 }
 
 /** Main Window *****************************************************/
 window {
-  transparency:         "real";
-  width:                60%;
-  height:               60%;
+  transparency:                   "real";
+  width:                          60%;
+  height:                         60%;
 
-  background-color: transparent;
+  background-color:               transparent;
 
-  children: [ mainbox ];
+  children:                       [ mainbox ];
 
   /* Properties for all widgets */
-  enabled:          true;
-  margin:           0px;
-  padding:          0px;
-  border-radius:    0px;
-  border:           0px solid;
-  border-color:     @c-border;
-  /* Background colors */
-  background-color: transparent;
+  enabled:                        true;
+  margin:                         0px;
+  padding:                        0px;
+  border-radius:                  0px;
+  border:                         0px solid;
+  border-color:                   @c-border;
+  background-color:               transparent;
 }
 
 mainbox {
-  border-radius:        10px;
-  border-color:         @c-border;
-  border:               2px solid;
+  border-radius:                  10px;
+  border-color:                   @c-border;
+  border:                         2px solid;
 
-  background-color: @c-bg-trans;
+  background-color:               @c-bg-trans;
 
-  children: [ inputbar, listview ];
+  children:                       [ inputbar, listview ];
 }
 
 /** Inputbar ********************************************************/
@@ -71,7 +70,7 @@ inputbar {
 
 prompt {
   padding:                        0px 0px 0px 10px;
-  font: "JetBrainsMono Nerd Font Medium 20";
+  font:                           "JetBrainsMono Nerd Font Medium 20";
   text-color:                     inherit;
   background-color:               inherit;
 }
@@ -98,13 +97,13 @@ num-container {
   font:                           inherit;
   background-color:               @c-bg;
 
-  padding: 0 10px;
-  border-radius: 30px;
-  border: 2px solid;
-  border-color: @c-border;
+  padding:                        0 10px;
+  border-radius:                  30px;
+  border:                         2px solid;
+  border-color:                   @c-border;
 
-  expand: false;
-  orientation: horizontal;
+  expand:                         false;
+  orientation:                    horizontal;
 
   children: [ num-filtered-rows, textbox-num-sep, num-rows ];
 }

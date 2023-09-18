@@ -1,6 +1,6 @@
 /* @File:       main.rs
  * @Author:     amber
- * @Date:       18/09/23
+ * @Date:       19/09/23
  * @Abstract:   CLI om pdfs te beheren
  */
 
@@ -14,11 +14,6 @@ use std::fs;
 use std::fs::OpenOptions;
 use std::io::prelude::*;
 use std::path::Path;
-
-//use std::io::Write;
-
-// For errors
-// use std::error::Error;
 
 const FILENAME_PDFS: &str =
     "/home/amber/docs/scripts/rofi/pdf_opener/pdf_manager/pdfs.txt";

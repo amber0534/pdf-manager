@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 #
 # Usage: ./launch.sh
 #
@@ -22,6 +21,9 @@ CHOICE=$(
 )
 EXIT_CODE=$?
 
+# Exit code van rofi is 0 als de gebruiker een keuze heeft gemaakt,
+# 1 als de gebruiker escapet, en iets van 10-28 bij gebruik van
+# keybindings (niet van toepassing hier)
 if [[ $EXIT_CODE != 0 ]]; then
   echo "Exit status not equal to 0"
   exit 1

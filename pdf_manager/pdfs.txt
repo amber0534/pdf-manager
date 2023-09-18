@@ -1,3 +1,0 @@
-/home/amber/docs/example.pdf @ Example pdf
-/home/amber/docs/algebra.pdf @ Algebra pdf
-/home/amber/docs/uni/jaar2/algebra2/algebra2.pdf @ Algebra 2 dictaat
