@@ -353,7 +353,7 @@ fn main() {
         "-h" | "--help" => print_help(),
         "-l" | "--list" => list_pdfs(&args),
         "-a" | "--add" => add_pdf(&args),
-        "-d" | "--delete" => delete_pdf(&args),
+        "-d" | "--del" => delete_pdf(&args),
         &_ => print_help(),
     };
 
