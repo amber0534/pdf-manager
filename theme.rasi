@@ -1,0 +1,167 @@
+// General properties
+* {
+  font: "JetBrainsMono Nerd Font Light 12";
+
+  // Backgrounds
+  c-bg:             #14171c;
+  c-bg-alt:         #202025;
+  dark:             #3c3c3c;
+  foreground:       #ffeedd;
+  c-selected:       #555555;
+  c-bg-trans:       #00000055;
+  c-bg-trans2:      #000000aa;
+
+  // Text colors
+  c-text:           #ffffff;
+  c-text-alt:       #dddddd;
+
+  // Red colors
+  c-red:            #ff0000;
+
+  // Border colors
+  c-border:         #ffffff;
+  c-border-alt:     #ffffff55;
+}
+
+/** Main Window *****************************************************/
+window {
+  transparency:         "real";
+  width:                60%;
+  height:               60%;
+
+  background-color: transparent;
+
+  children: [ mainbox ];
+
+  /* Properties for all widgets */
+  enabled:          true;
+  margin:           0px;
+  padding:          0px;
+  border-radius:    0px;
+  border:           0px solid;
+  border-color:     @c-border;
+  /* Background colors */
+  background-color: transparent;
+}
+
+mainbox {
+  border-radius:        10px;
+  border-color:         @c-border;
+  border:               2px solid;
+
+  background-color: @c-bg-trans;
+
+  children: [ inputbar, listview ];
+}
+
+/** Inputbar ********************************************************/
+
+inputbar {
+  background-color:               transparent;
+  text-color:                     @c-text;
+  font:                           "JetBrainsMono Nerd Font Medium 20";
+
+  padding:                        10px;
+
+  children: [ prompt, textbox-prompt-colon, entry, num-container ];
+
+  border:                         0px solid 0px 2px;
+  border-color:                   @c-border;
+}
+
+prompt {
+  padding:                        0px 0px 0px 10px;
+  font: "JetBrainsMono Nerd Font Medium 20";
+  text-color:                     inherit;
+  background-color:               inherit;
+}
+textbox-prompt-colon {
+  text-color:                     inherit;
+  background-color:               inherit;
+  font:                           inherit;
+
+  expand:                         false;
+
+  str:                            ">";
+}
+
+entry {
+  padding:                        0px 0px 0px 5px;
+  text-color:                     inherit;
+  background-color:               inherit;
+  font:                           inherit;
+}
+
+num-container {
+  text-color:                     inherit;
+  background-color:               inherit;
+  font:                           inherit;
+  background-color:               @c-bg;
+
+  padding: 0 10px;
+  border-radius: 30px;
+  border: 2px solid;
+  border-color: @c-border;
+
+  expand: false;
+  orientation: horizontal;
+
+  children: [ num-filtered-rows, textbox-num-sep, num-rows ];
+}
+num-filtered-rows {
+  text-color:                     inherit;
+  background-color:               inherit;
+  font:                           inherit;
+}
+num-rows {
+  text-color:                     inherit;
+  background-color:               inherit;
+  font:                           inherit;
+}
+textbox-num-sep {
+  text-color:                     inherit;
+  background-color:               inherit;
+  font:                           inherit;
+  expand:                         false;
+  str:                            "/";
+}
+
+case-indicator {
+  text-color:                     inherit;
+  background-color:               inherit;
+  font:                           inherit;
+  str: "afsdf";
+  spacing: 0;
+}
+
+/** Listview ********************************************************/
+listview {
+  background-color:               transparent;
+
+  padding:                        10px;
+  spacing:                        10px;
+
+  columns:                        2;
+  flow:                           horizontal;
+  fixed-columns:                  true;
+}
+
+element {
+  padding:                        7px 7px 7px 7px;
+
+  background-color:               inherit;
+
+  border:                         1px solid;
+  border-color:                   @c-border-alt;
+  border-radius:                  5px;
+}
+element selected {
+  border-color:                   @c-border;
+  background-color:               @c-bg-alt;
+}
+element-text {
+  font:                           "JetBrainsMono Nerd Font Medium 12";
+  background-color:               inherit;
+  text-color:                     @c-text;
+}
+
